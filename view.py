@@ -1,11 +1,17 @@
 from app import app, db
-from flask import jsonify
+from flask import jsonify, redirect
 from models import Product, ProductSchema
 from functions import extract
 
 # Init schema
 product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)
+
+
+# Redirect to /product
+@app.route('/')
+def root():
+    return redirect('/product')
 
 
 # Create a Product
