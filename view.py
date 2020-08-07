@@ -3,10 +3,10 @@ from flask import jsonify
 from models import Product, ProductSchema
 from functions import extract
 
-
 # Init schema
 product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)
+
 
 # Create a Product
 @app.route('/product', methods=['POST'])

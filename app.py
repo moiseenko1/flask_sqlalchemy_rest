@@ -6,7 +6,8 @@ import os
 import logging
 
 # Init logging to app.log
-logging.basicConfig(level=logging.DEBUG, filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, filename='app.log', filemode='w',
+                    format='%(name)s - %(levelname)s - %(message)s')
 
 # Init app
 app = Flask(__name__)
